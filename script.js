@@ -25,33 +25,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     darkModeToggle.addEventListener('click', (e) => {
         const rect = darkModeToggle.getBoundingClientRect();
-        const x = ((rect.left + rect.width / 2) / window.innerWidth) * 100;
-        const y = ((rect.top + rect.height / 2) / window.innerHeight) * 100;
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
 
-        themeOverlay.style.setProperty('--click-x', `${x}%`);
-        themeOverlay.style.setProperty('--click-y', `${y}%`);
+        // Position the wave via CSS custom properties
+        themeOverlay.style.setProperty('--wave-x', `${centerX}px`);
+        themeOverlay.style.setProperty('--wave-y', `${centerY}px`);
 
         const isDark = body.classList.contains('dark-mode');
 
-        // Set the wave color to the NEW theme color
+        // Set wave color based on target theme
         themeOverlay.classList.remove('to-dark', 'to-light', 'active');
         themeOverlay.classList.add(isDark ? 'to-light' : 'to-dark');
 
-        // Force reflow
+        // Force reflow then start animation
         void themeOverlay.offsetWidth;
-
-        // Start wave sweep animation
         themeOverlay.classList.add('active');
 
-        // Toggle theme when wave reaches midpoint (~50% coverage)
-        // Elements transform as wave passes over them
-        setTimeout(() => {
-            body.classList.toggle('dark-mode');
-            localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-            lucide.createIcons();
-        }, 350);
+        // Toggle theme immediately - elements change as wave passes
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+        lucide.createIcons();
 
-        // Clean up after animation completes
+        // Cleanup after animation
         setTimeout(() => {
             themeOverlay.classList.remove('active', 'to-dark', 'to-light');
         }, 750);

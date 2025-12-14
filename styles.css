@@ -91,7 +91,7 @@ body.dark-mode {
     --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Theme Transition Overlay - Wave Effect */
+/* Theme Transition Overlay - Visible Shockwave Effect */
 .theme-transition-overlay {
     position: fixed;
     top: 0;
@@ -100,35 +100,72 @@ body.dark-mode {
     height: 100%;
     pointer-events: none;
     z-index: 9999;
-    clip-path: circle(0% at 50% 50%);
-    opacity: 0;
 }
 
-.theme-transition-overlay.to-dark {
-    background: #000000;
+/* The shockwave ring - visible and GPU optimized */
+.theme-transition-overlay::before {
+    content: '';
+    position: fixed;
+    top: var(--wave-y, 50%);
+    left: var(--wave-x, 50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    will-change: transform;
+    pointer-events: none;
+    /* Visible glowing ring */
+    background: radial-gradient(circle,
+            transparent 0%,
+            transparent 35%,
+            rgba(0, 113, 227, 0.7) 45%,
+            rgba(59, 130, 246, 1) 50%,
+            rgba(0, 113, 227, 0.7) 55%,
+            transparent 65%,
+            transparent 100%);
+    box-shadow: 0 0 40px 10px rgba(0, 113, 227, 0.4);
 }
 
-.theme-transition-overlay.to-light {
-    background: #fbfbfd;
+.theme-transition-overlay.to-dark::before {
+    background: radial-gradient(circle,
+            transparent 0%,
+            transparent 35%,
+            rgba(138, 43, 226, 0.7) 45%,
+            rgba(191, 90, 242, 1) 50%,
+            rgba(138, 43, 226, 0.7) 55%,
+            transparent 65%,
+            transparent 100%);
+    box-shadow: 0 0 40px 10px rgba(191, 90, 242, 0.5);
 }
 
-.theme-transition-overlay.active {
-    animation: waveSweep 0.7s ease-in-out forwards;
+.theme-transition-overlay.to-light::before {
+    background: radial-gradient(circle,
+            transparent 0%,
+            transparent 35%,
+            rgba(0, 113, 227, 0.7) 45%,
+            rgba(59, 130, 246, 1) 50%,
+            rgba(0, 113, 227, 0.7) 55%,
+            transparent 65%,
+            transparent 100%);
+    box-shadow: 0 0 40px 10px rgba(59, 130, 246, 0.5);
 }
 
-@keyframes waveSweep {
+.theme-transition-overlay.active::before {
+    animation: ringExpand 0.65s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+@keyframes ringExpand {
     0% {
-        clip-path: circle(0% at var(--click-x, 50%) var(--click-y, 50%));
+        transform: translate(-50%, -50%) scale(0);
         opacity: 1;
     }
 
-    50% {
-        clip-path: circle(100% at var(--click-x, 50%) var(--click-y, 50%));
-        opacity: 1;
+    80% {
+        opacity: 0.8;
     }
 
     100% {
-        clip-path: circle(150% at var(--click-x, 50%) var(--click-y, 50%));
+        transform: translate(-50%, -50%) scale(80);
         opacity: 0;
     }
 }
@@ -392,6 +429,7 @@ body.dark-mode #darkModeToggle .moon-icon {
 }
 
 .mobile-menu.active {
+    display: flex;
     transform: translateY(0);
     opacity: 1;
 }
@@ -1064,13 +1102,13 @@ body.dark-mode .code-number {
     border: 1px solid var(--card-border);
     border-radius: var(--radius-xl);
     padding: var(--spacing-xl);
-    transition: all var(--transition-spring);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .skill-category:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) !important;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15) !important;
     border-color: var(--accent-blue);
-    box-shadow: 0 20px 40px var(--shadow-color);
 }
 
 .skill-category-header {
@@ -1185,17 +1223,13 @@ body.dark-mode .code-number {
     padding: var(--spacing-2xl);
     position: relative;
     overflow: hidden;
-    transform-style: preserve-3d;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        border-color 0.4s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .project-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15);
     border-color: var(--accent-blue);
-    box-shadow:
-        0 25px 50px -12px rgba(0, 113, 227, 0.15),
-        0 0 0 1px rgba(0, 113, 227, 0.2);
 }
 
 .project-number {
@@ -2411,20 +2445,7 @@ body.dark-mode .project-logo.sentinel .logo-dark {
    Enhanced 3D Card Effects (Handled via JS for tilt)
    ===================================================== */
 
-/* Skill Category Cards 3D Effect */
-.skill-category {
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.skill-category:hover {
-    transform: translateY(-8px) rotateX(2deg) rotateY(-1deg);
-    box-shadow:
-        0 20px 40px -10px rgba(0, 113, 227, 0.15),
-        0 0 0 1px var(--accent-blue);
-    border-color: var(--accent-blue);
-}
+/* Skill Category Cards - see main styles at line ~1098 */
 
 /* Achievement Cards 3D */
 .achievement-card {
@@ -2532,18 +2553,7 @@ body.dark-mode .project-logo.sentinel .logo-dark {
 /* =====================================================
    Apple-like Scroll Reveal Enhancements
    ===================================================== */
-.reveal {
-    opacity: 0;
-    transform: translate3d(0, 60px, 0);
-    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: opacity, transform;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-}
+/* Reveal styles defined at lines ~1950. Extra reveal variants below: */
 
 /* Scale up reveal for special elements */
 .reveal-scale {
@@ -2572,4 +2582,97 @@ body.dark-mode .project-logo.sentinel .logo-dark {
 .reveal-right.active {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+}
+
+/* =====================================================
+   Mobile Responsiveness (Max width 768px)
+   ===================================================== */
+@media (max-width: 768px) {
+
+    /* Header & Navigation Fixes */
+    .nav-container {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .nav-links {
+        display: none;
+        /* Hide desktop menu links */
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        /* Show hamburger menu */
+        margin-left: var(--spacing-md);
+    }
+
+    #navbar {
+        height: auto;
+        /* Ensure height wraps content */
+    }
+
+    /* Hero Section - Single Column */
+    .hero {
+        padding: 100px var(--spacing-md) var(--spacing-xl);
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-xl);
+    }
+
+    .hero-text {
+        margin: 0 auto;
+    }
+
+    .hero-name {
+        font-size: 3rem;
+    }
+
+    .stat-row {
+        justify-content: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* Reduce Hero Visual Size */
+    .hero-visual {
+        margin-top: var(--spacing-lg);
+        transform: scale(0.9);
+    }
+
+    /* Project Logos - Larger on Mobile */
+    .project-logo,
+    .project-icon-wrap {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto var(--spacing-md);
+    }
+
+    .project-card {
+        text-align: center;
+        padding: var(--spacing-lg) var(--spacing-md);
+        /* Vertical padding increased, horizontal balanced */
+        min-height: auto;
+        /* Let card grow with content */
+        overflow: visible;
+        /* Prevent chopping */
+    }
+
+    .project-highlights {
+        text-align: left;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        /* Stack skill columns */
+    }
+
+    /* Container Padding */
+    .container {
+        padding: 0 var(--spacing-md);
+    }
 }
