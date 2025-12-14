@@ -2373,24 +2373,38 @@ body.dark-mode #darkModeToggle .moon-icon {
     transform: rotate(0deg) scale(1);
 }
 
-/* Sentinel Logo - Invert for light/dark mode */
+/* Sentinel Logo - Light/Dark Mode Switching */
 .project-logo.sentinel {
-    background: #ffffff;
-    border-radius: var(--radius-lg);
-    padding: 8px;
+    background: transparent;
+    /* Background handled by images themselves if needed, or transparent */
+    padding: 0;
+    /* Remove padding if images are self-contained */
 }
 
+/* Default (Light Mode) */
+.project-logo.sentinel .logo-light {
+    display: block;
+}
+
+.project-logo.sentinel .logo-dark {
+    display: none;
+}
+
+/* Dark Mode */
+body.dark-mode .project-logo.sentinel .logo-light {
+    display: none;
+}
+
+body.dark-mode .project-logo.sentinel .logo-dark {
+    display: block;
+}
+
+/* Ensure both adapt to container */
 .project-logo.sentinel img {
-    filter: invert(1);
-    transition: filter 0.3s ease;
-}
-
-body.dark-mode .project-logo.sentinel {
-    background: #1c1c1e;
-}
-
-body.dark-mode .project-logo.sentinel img {
-    filter: invert(0);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
 }
 
 /* =====================================================
