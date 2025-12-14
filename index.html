@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goutham Tiwari - Operations Specialist & System Architect</title>
+    <meta name="description"
+        content="Results-driven Operations Specialist with 2.5+ years at Amazon. Building automation tools that increase team productivity by 30-50%.">
+    <meta name="keywords"
+        content="Goutham Tiwari, Operations Specialist, System Architect, Amazon, React Native, Node.js, Full Stack Developer">
+    <meta name="author" content="Goutham Tiwari">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Goutham Tiwari - Operations Specialist & System Architect">
+    <meta property="og:description"
+        content="Results-driven Operations Specialist building automation tools that transform operations.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Theme Transition Overlay -->
+    <div class="theme-transition-overlay" id="themeOverlay"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">GT</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact" class="nav-cta">Contact</a>
+            </div>
+            <button id="darkModeToggle" aria-label="Toggle dark mode">
+                <i data-lucide="sun" class="sun-icon"></i>
+                <i data-lucide="moon" class="moon-icon"></i>
+            </button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting reveal">Hello, I'm</p>
+                <h1 class="hero-name reveal">
+                    <span class="gradient-text">Goutham Tiwari</span>
+                </h1>
+                <h2 class="hero-title reveal">Operations Specialist & System Architect</h2>
+                <p class="hero-description reveal">
+                    Results-driven specialist with 2.5+ years at Amazon, building automation tools that increase team
+                    productivity by <strong>30-50%</strong> and enable <strong>10,000+</strong> additional tickets
+                    annually.
+                </p>
+                <div class="hero-stats reveal">
+                    <div class="stat">
+                        <span class="stat-number" data-target="2.5">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Years at Amazon</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="10000">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Tickets Unlocked</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="50">0</span><span class="stat-suffix">%</span>
+                        <span class="stat-label">Productivity Gains</span>
+                    </div>
+                </div>
+                <div class="hero-buttons reveal">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Explore My Work</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="code-card">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="code-title">architect.js</span>
+                    </div>
+                    <div class="code-body">
+                        <div class="code-line">
+                            <span class="line-number">1</span>
+                            <span class="code-keyword">const</span> <span class="code-function">buildSolutions</span> =
+                            <span class="code-keyword">async</span> () => {
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">2</span>
+                            <span class="code-indent"></span><span class="code-keyword">const</span> impact = <span
+                                class="code-keyword">await</span> <span class="code-function">automate</span>({
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">3</span>
+                            <span class="code-indent"></span><span class="code-indent"></span>productivity: <span
+                                class="code-string">"50%+"</span>,
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">4</span>
+                            <span class="code-indent"></span><span class="code-indent"></span>tickets: <span
+                                class="code-number">10000</span>,
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">5</span>
+                            <span class="code-indent"></span><span class="code-indent"></span>award: <span
+                                class="code-string">"Sparkle ✨"</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">6</span>
+                            <span class="code-indent"></span>});
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">7</span>
+                            <span class="code-indent"></span><span class="code-keyword">return</span> impact;
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">8</span>
+                            };
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <i data-lucide="chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Building Tools That<br><span class="gradient-text">Transform Operations</span>
+                </h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text reveal">
+                    <p class="about-lead">
+                        I don't just follow processes—I build the tools that transform them.
+                    </p>
+                    <p>
+                        Results-driven Operations Specialist with <strong>2.5+ years at Amazon</strong>, progressing
+                        from Customer Service to operations leadership. Expert in process optimization, workflow
+                        automation, and cross-functional collaboration across global operations (NA, EU, MENA, FE).
+                    </p>
+                    <p>
+                        From automation suites handling <strong>10,000+ tickets</strong> to real-time analytics
+                        dashboards used by entire teams, I architect solutions that drive measurable impact. Recognized
+                        with the <strong>"New Horizon Sparkle" award</strong> within just 2 months for building
+                        transformative automation tools.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i data-lucide="rocket"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <strong>3 Role Progression</strong>
+                                <span>CS Associate → SPS CSAC → Operations Specialist</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i data-lucide="trophy"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <strong>Award Winner</strong>
+                                <span>New Horizon Sparkle within 2 months</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i data-lucide="globe"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <strong>Global Impact</strong>
+                                <span>Operations across NA, EU, MENA, FE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual reveal">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <img src="profile-corporate.png" alt="Goutham Tiwari" />
+                        </div>
+                        <h3>Goutham Tiwari</h3>
+                        <p class="profile-role">Operations Specialist</p>
+                        <p class="profile-company">@ Amazon</p>
+                        <div class="profile-badges">
+                            <span class="badge">System Architect</span>
+                            <span class="badge">Full Stack Dev</span>
+                            <span class="badge">Automation Expert</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Skills & <span class="gradient-text">Capabilities</span></h2>
+                <p class="section-description">A blend of technical prowess and professional excellence</p>
+            </div>
+            <div class="skills-grid">
+                <!-- Professional Skills -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+                        <h3>Professional Skills</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Cross-Functional Operations Management</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Stakeholder Communication</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Project Coordination</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Training & Mentorship</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i data-lucide="palette"></i>
+                        </div>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-tooltip="React 19"><i data-lucide="atom"></i>React</span>
+                        <span class="skill-tag" data-tooltip="Mobile Apps"><i data-lucide="smartphone"></i>React
+                            Native</span>
+                        <span class="skill-tag" data-tooltip="SSR Framework"><i
+                                data-lucide="triangle"></i>Next.js</span>
+                        <span class="skill-tag" data-tooltip="Type Safety"><i
+                                data-lucide="file-code"></i>TypeScript</span>
+                        <span class="skill-tag" data-tooltip="Utility CSS"><i data-lucide="wind"></i>Tailwind</span>
+                        <span class="skill-tag" data-tooltip="Core Web"><i data-lucide="code"></i>HTML/CSS</span>
+                        <span class="skill-tag" data-tooltip="ES6+"><i data-lucide="file-json"></i>JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i data-lucide="settings"></i>
+                        </div>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i data-lucide="hexagon"></i>Node.js</span>
+                        <span class="skill-tag"><i data-lucide="route"></i>Express.js</span>
+                        <span class="skill-tag"><i data-lucide="radio"></i>Socket.io</span>
+                        <span class="skill-tag"><i data-lucide="send"></i>REST APIs</span>
+                        <span class="skill-tag"><i data-lucide="key"></i>JWT Auth</span>
+                        <span class="skill-tag"><i data-lucide="flame"></i>Firebase</span>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <h3>Database & Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i data-lucide="cylinder"></i>PostgreSQL</span>
+                        <span class="skill-tag"><i data-lucide="leaf"></i>MongoDB</span>
+                        <span class="skill-tag"><i data-lucide="zap"></i>Redis</span>
+                        <span class="skill-tag"><i data-lucide="link"></i>Sequelize</span>
+                        <span class="skill-tag"><i data-lucide="table"></i>SQL</span>
+                        <span class="skill-tag"><i data-lucide="git-branch"></i>Git</span>
+                    </div>
+                </div>
+
+                <!-- Specialties -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper specialty">
+                            <i data-lucide="target"></i>
+                        </div>
+                        <h3>Specialties</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight"><i data-lucide="workflow"></i>Workflow Automation</span>
+                        <span class="skill-tag highlight"><i data-lucide="layout-dashboard"></i>Dashboard
+                            Development</span>
+                        <span class="skill-tag highlight"><i data-lucide="bot"></i>AI-Assisted Dev</span>
+                        <span class="skill-tag highlight"><i data-lucide="message-square"></i>Prompt
+                            Engineering</span>
+                        <span class="skill-tag highlight"><i data-lucide="activity"></i>Real-time Systems</span>
+                    </div>
+                </div>
+
+                <!-- Integrations -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i data-lucide="plug"></i>
+                        </div>
+                        <h3>Integrations</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i data-lucide="credit-card"></i>Razorpay</span>
+                        <span class="skill-tag"><i data-lucide="bell"></i>Firebase FCM</span>
+                        <span class="skill-tag"><i data-lucide="map"></i>Google Maps</span>
+                        <span class="skill-tag"><i data-lucide="puzzle"></i>Tampermonkey</span>
+                        <span class="skill-tag"><i data-lucide="languages"></i>i18n</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-description">Production systems solving real business problems</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Sentinel -->
+                <div class="project-card featured reveal">
+                    <div class="project-number">01</div>
+                    <div class="project-badge">Featured</div>
+                    <div class="project-logo sentinel">
+                        <img src="sentinel-logo.png" alt="Sentinel Logo" />
+                    </div>
+                    <h3>Sentinel</h3>
+                    <p class="project-role">System Architect & Lead Developer</p>
+                    <p class="project-description">
+                        Enterprise workflow analytics and monitoring system for Amazon operations. Complete system
+                        architecture from database schema to full-stack UI.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Architected 12-table PostgreSQL database schema</li>
+                        <li>Built 10+ dashboard pages with real-time analytics</li>
+                        <li>Created Tampermonkey browser extension for SIM integration</li>
+                        <li>Designed complete UI/UX from wireframes to production</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Next.js 16</span>
+                        <span>React 19</span>
+                        <span>PostgreSQL</span>
+                        <span>TypeScript</span>
+                        <span>Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <!-- Bhaaya -->
+                <div class="project-card featured reveal">
+                    <div class="project-number">02</div>
+                    <div class="project-badge">Featured</div>
+                    <div class="project-logo">
+                        <img src="logo.png" alt="Bhaaya Logo" />
+                    </div>
+                    <h3>Bhaaya</h3>
+                    <p class="project-role">Full Stack Developer & Solution Architect</p>
+                    <p class="project-description">
+                        Complete ride-hailing platform with two-app ecosystem serving customers and drivers. Real-time
+                        ride matching, live tracking, and subscription-based business model.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Built separate React Native apps for customers & drivers</li>
+                        <li>Implemented Socket.io for real-time ride matching & tracking</li>
+                        <li>Designed daily pass subscription model for driver monetization</li>
+                        <li>Integrated Razorpay payments & Firebase Auth</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>React Native</span>
+                        <span>Node.js</span>
+                        <span>Socket.io</span>
+                        <span>PostgreSQL</span>
+                        <span>Razorpay</span>
+                    </div>
+                </div>
+
+                <!-- Hawk-I -->
+                <div class="project-card reveal">
+                    <div class="project-number">03</div>
+                    <div class="project-logo">
+                        <img src="hawki-logo.png" alt="Hawk-I Logo" />
+                    </div>
+                    <h3>Hawk-I</h3>
+                    <p class="project-role">Creator & Developer</p>
+                    <p class="project-description">
+                        Full automation suite that removed manual document checks and streamlined ticket resolution
+                        workflows at Amazon.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Reduced handling time by 30%</li>
+                        <li>Unlocked 10,000+ extra tickets resolved annually</li>
+                        <li>Became team-wide standard with leadership recognition</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Automation</span>
+                        <span>JavaScript</span>
+                        <span>Process Optimization</span>
+                    </div>
+                    <div class="project-award">
+                        <i data-lucide="award"></i>
+                        <span>New Horizon Sparkle + R&R</span>
+                    </div>
+                </div>
+
+                <!-- Listing Lookup Tool -->
+                <div class="project-card reveal">
+                    <div class="project-number">04</div>
+                    <div class="project-logo">
+                        <img src="listing-lookup-logo.png" alt="Listing Lookup Logo" />
+                    </div>
+                    <h3>Listing Lookup Tool</h3>
+                    <p class="project-role">Developer</p>
+                    <p class="project-description">
+                        Workflow optimization tool that replaced multi-tab research with a streamlined single-tab
+                        workflow.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Replaced complex multi-tab research</li>
+                        <li>Significantly increased investigation speed</li>
+                        <li>Improved accuracy and consistency</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Workflow</span>
+                        <span>Optimization</span>
+                        <span>UX</span>
+                    </div>
+                </div>
+
+                <!-- Root Cause Detection -->
+                <div class="project-card reveal">
+                    <div class="project-number">05</div>
+                    <div class="project-logo">
+                        <img src="root-cause-logo.png" alt="Root Cause Logo" />
+                    </div>
+                    <h3>Root Cause Detection System</h3>
+                    <p class="project-role">Developer</p>
+                    <p class="project-description">
+                        Automated system for identifying root causes in ticket escalations, significantly improving
+                        classification accuracy.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Improved RC accuracy by 35%</li>
+                        <li>Reduced misclassification and escalation loops</li>
+                        <li>Streamlined investigation workflows</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>AI/ML</span>
+                        <span>Automation</span>
+                        <span>Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Career</span>
+                <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+                <p class="section-description">My journey at Amazon</p>
+            </div>
+            <div class="timeline">
+                <!-- Operations Specialist -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Jun 2025 - Present</span>
+                            <span class="timeline-current">Current</span>
+                        </div>
+                        <h3>Operations Specialist</h3>
+                        <p class="timeline-company">Amazon</p>
+                        <ul class="timeline-details">
+                            <li>Manage end-to-end product accuracy issues from procurement to shipment across NA, EU,
+                                and FE</li>
+                            <li>Conduct deep ASIN investigations resolving seller contributions, variation conflicts,
+                                and retail data discrepancies</li>
+                            <li>Built three automation tools that transformed team workflows</li>
+                            <li>Earned "New Horizon Sparkle" award within 2 months of joining</li>
+                            <li>Created Hawk-I automation suite (30% time reduction, 10,000+ tickets unlocked)</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Operations</span>
+                            <span>Automation</span>
+                            <span>Analytics</span>
+                            <span>Leadership</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPS CSAC Associate -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <i data-lucide="search"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Feb 2025 - May 2025</span>
+                        </div>
+                        <h3>SPS CSAC Associate</h3>
+                        <p class="timeline-company">Amazon</p>
+                        <ul class="timeline-details">
+                            <li>Managed CS raised tickets and system triggered alerts</li>
+                            <li>Investigated seller accounts and coordinated resolutions</li>
+                            <li>Made data-driven listing suppression decisions</li>
+                            <li>Developed the Listing Lookup Tool (single-tab workflow)</li>
+                            <li>Created Root Cause Detection System (35% accuracy improvement)</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Investigation</span>
+                            <span>Tool Development</span>
+                            <span>Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Service Associate -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <i data-lucide="headphones"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">June 2023 - Feb 2025</span>
+                        </div>
+                        <h3>Customer Service Associate</h3>
+                        <p class="timeline-company">Amazon</p>
+                        <ul class="timeline-details">
+                            <li>Handled complex, high-effort customer issues for heavy & bulky deliveries</li>
+                            <li>Promoted to Subject Matter Expert (SME) in Apex team</li>
+                            <li>Specialized in payments, gift cards, fraud detection, and scam prevention</li>
+                            <li>Trained and mentored two batches of new associates</li>
+                            <li>Authored team-wide Apex process guide improving workflow consistency</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Customer Service</span>
+                            <span>SME</span>
+                            <span>Mentorship</span>
+                            <span>Documentation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education" class="section education">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Education</span>
+                <h2 class="section-title">Education & <span class="gradient-text">Certifications</span></h2>
+            </div>
+            <div class="education-grid">
+                <!-- Degree -->
+                <div class="education-card reveal">
+                    <div class="education-icon-wrap">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <h3>B.Sc Data Science</h3>
+                    <p class="education-period">Aug 2022 - Apr 2025</p>
+                    <p class="education-major">Major in Data Science</p>
+                    <div class="education-projects">
+                        <strong>Academic Projects:</strong>
+                        <ul>
+                            <li><i data-lucide="bar-chart-3"></i>Data Visualization Dashboard</li>
+                            <li><i data-lucide="database"></i>SQL Database Management System</li>
+                            <li><i data-lucide="brain"></i>ML-based Sentiment Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="education-card reveal">
+                    <div class="education-icon-wrap">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <h3>Certifications</h3>
+                    <div class="cert-list">
+                        <a href="https://www.linkedin.com/learning" target="_blank" class="cert-item">
+                            <div class="cert-icon">
+                                <i data-lucide="linkedin"></i>
+                            </div>
+                            <div class="cert-info">
+                                <span class="cert-name">QST Data Analytics</span>
+                                <span class="cert-provider">LinkedIn Learning</span>
+                            </div>
+                            <i data-lucide="external-link" class="cert-link"></i>
+                        </a>
+                        <a href="https://www.amazon.com" target="_blank" class="cert-item">
+                            <div class="cert-icon amazon">
+                                <i data-lucide="shopping-cart"></i>
+                            </div>
+                            <div class="cert-info">
+                                <span class="cert-name">SQL Certification</span>
+                                <span class="cert-provider">Amazon</span>
+                            </div>
+                            <i data-lucide="external-link" class="cert-link"></i>
+                        </a>
+                        <a href="https://www.apnacollege.in" target="_blank" class="cert-item">
+                            <div class="cert-icon apna">
+                                <i data-lucide="code-2"></i>
+                            </div>
+                            <div class="cert-info">
+                                <span class="cert-name">MERN Stack Development</span>
+                                <span class="cert-provider">Apna College</span>
+                            </div>
+                            <i data-lucide="external-link" class="cert-link"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section achievements">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Recognition</span>
+                <h2 class="section-title">Achievements & <span class="gradient-text">Awards</span></h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon-wrap gold">
+                        <i data-lucide="trophy"></i>
+                    </div>
+                    <h3>New Horizon Sparkle Award 2025</h3>
+                    <p>Awarded within 2 months of joining Operations Specialist role for building transformative
+                        automation tools</p>
+                </div>
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon-wrap purple">
+                        <i data-lucide="star"></i>
+                    </div>
+                    <h3>Multiple RNRs</h3>
+                    <p>Recognition & Rewards for outstanding performance and contributions</p>
+                </div>
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon-wrap blue">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <h3>10,000+ Tickets Unlocked</h3>
+                    <p>Hawk-I automation suite enabling additional ticket resolution annually</p>
+                </div>
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon-wrap green">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <h3>35% Accuracy Improvement</h3>
+                    <p>Root Cause Detection System improving classification accuracy</p>
+                </div>
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon-wrap orange">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>SME & Mentor</h3>
+                    <p>Trained 2 batches of new associates, both delivering top-tier performance</p>
+                </div>
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon-wrap cyan">
+                        <i data-lucide="file-text"></i>
+                    </div>
+                    <h3>Process Guide Author</h3>
+                    <p>Created team-wide Apex process guide adopted for onboarding</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section hobbies">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Beyond Work</span>
+                <h2 class="section-title">Hobbies & <span class="gradient-text">Interests</span></h2>
+            </div>
+            <div class="hobbies-grid">
+                <div class="hobby-card reveal">
+                    <div class="hobby-icon-wrap">
+                        <i data-lucide="chef-hat"></i>
+                    </div>
+                    <h3>Cooking</h3>
+                    <p>Experimenting with new recipes and cuisines</p>
+                </div>
+                <div class="hobby-card reveal">
+                    <div class="hobby-icon-wrap">
+                        <i data-lucide="guitar"></i>
+                    </div>
+                    <h3>Playing Guitar</h3>
+                    <p>Making music and learning new songs</p>
+                </div>
+                <div class="hobby-card reveal">
+                    <div class="hobby-icon-wrap">
+                        <i data-lucide="bike"></i>
+                    </div>
+                    <h3>Riding</h3>
+                    <p>Exploring roads and scenic routes</p>
+                </div>
+                <div class="hobby-card reveal">
+                    <div class="hobby-icon-wrap">
+                        <i data-lucide="circle-dot"></i>
+                    </div>
+                    <h3>Badminton</h3>
+                    <p>Staying active and competitive</p>
+                </div>
+                <div class="hobby-card reveal">
+                    <div class="hobby-icon-wrap">
+                        <i data-lucide="gamepad-2"></i>
+                    </div>
+                    <h3>Competitive Esports</h3>
+                    <p>Gaming at a competitive level</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact-card reveal">
+                <div class="section-header">
+                    <span class="section-tag">Let's Connect</span>
+                    <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                    <p class="section-description">Have a project in mind or just want to chat? I'd love to hear from
+                        you.</p>
+                </div>
+                <div class="contact-methods">
+                    <a href="mailto:tiwgoutham@gmail.com" class="contact-item">
+                        <div class="contact-icon-wrap">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">tiwgoutham@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="tel:+917013766371" class="contact-item">
+                        <div class="contact-icon-wrap">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Phone</span>
+                            <span class="contact-value">+91 7013766371</span>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/goutham-tiwari" target="_blank" rel="noopener"
+                        class="contact-item">
+                        <div class="contact-icon-wrap linkedin">
+                            <i data-lucide="linkedin"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">linkedin.com/in/goutham-tiwari</span>
+                        </div>
+                    </a>
+                    <div class="contact-item disabled">
+                        <div class="contact-icon-wrap github">
+                            <i data-lucide="github"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <a href="mailto:tiwgoutham@gmail.com" class="btn btn-primary btn-large">
+                        <span>Send Me a Message</span>
+                        <i data-lucide="send"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">GT</span>
+                    <p>Building solutions that make a difference.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/goutham-tiwari" target="_blank" rel="noopener"
+                        aria-label="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="mailto:tiwgoutham@gmail.com" aria-label="Email">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Goutham Tiwari. All rights reserved.</p>
+                <p>Designed & Built with <i data-lucide="heart" class="heart-icon"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
