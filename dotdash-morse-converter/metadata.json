@@ -1,7 +1,0 @@
-{
-  "name": "DotDash Morse Converter",
-  "description": "A premium, Apple-inspired Morse code converter that translates text to Morse code, provides audio playback with a visualizer, and uses the Gemini API to generate fun facts about Morse code.",
-  "requestFramePermissions": [
-    "microphone"
-  ]
-}
