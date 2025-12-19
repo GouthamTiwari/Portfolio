@@ -1,0 +1,161 @@
+
+
+
+Contact
+syedahafsafatima25@gmail.co m
+www.linkedin.com/in/syeda-hafsa- f-6a0275177 (LinkedIn)
+
+Top Skills
+People Management Pricing Strategy Incident Management
+
+Certifications
+Power BI: Working Together with ChatGPT
+Prompt Engineering: How to Talk to the AIs
+Lean Six Sigma Green Belt
+CSCMP Supply Chain Foundations: Demand Planning Professional Certificate
+Scrum: The Basics
+
+Syeda Hafsa Fatima, PMP(r) , LSSGB
+Ops Manager at Amazon | Gold Medalist | FC operations | Catalog, Incident, Program & People Management | 1st & Last Mile | RPA (UiPath) | SQL | E-Commerce | SCM | Brand, Seller,Vendor & Retail Account Management | ILAC
+Saudi Arabia
+
+Summary
+I am an Operations & Supply Chain Leader with 8+ years of experience driving e-commerce growth, marketplace excellence, and operational resilience across KSA, MENA, Europe, and global markets. At Amazon, I've led large-scale operations, supply chain programs, and marketplace initiatives that improve seller success while protecting revenue in high-SLA environments.
+
+My work focuses on merchant success and proactive incident management. I specialize in identifying early risk signals across catalog, pricing, inventory, and fulfillment, intervening before issues escalate into customer impact or multi-million-dollar vendor losses, especially during Ramadan, white friday sales, prime day and large launches.
+
+Key impact:
+
+1. $5.18M+ in direct revenue protection and $31M+ in potential losses prevented across $1B+ portfolios
+2. $6.3M annual reduction in excess and aging inventory
+3. 18,000+ operational hours saved annually through automation and process optimization
+4. 99.8-99.89%+ SLA compliance across vendors, sellers, and fulfillment operations
+5. 40-48% reduction in incident resolution times
+6. 60-100 bps improvement in catalog accuracy, availability, and inventory health
+7. 52+ enterprise vendors onboarded and scaled across KSA, MENA, and EU
+
+
+
+
+I've led automation and digital enablement initiatives to simplify seller experience, including:
+
+1. Intelligent Assistant built with Python, reducing ticket SLAs from 9+ to 5 business days
+2. Automation tools saving 800+ hours annually
+3. Large-scale catalog correction and compliance programs across KSA, UAE, Egypt, and Europe
+
+I've also led and developed global teams of 38+, sustaining 99.89%+ performance while mentoring future leaders in analytics, escalation, and operations management. My leadership style blends ownership, data-driven decision-making, and collaboration to deliver outcomes that are both operationally efficient and merchant-centric.
+
+I'm passionate about building scalable systems that empower sellers, strengthen supply chains, and drive sustainable e-commerce growth.
+
+Experience
+Amazon
+7 years 5 months
+Operations Manager
+August 2022 - Present (3 years 5 months)
+(1) Saved $5.18M by detecting and resolving pricing discrepancies across $1B annual revenue, strengthening partner trust and margins.
+
+(2) Led large-scale catalog and data correction initiatives across the Middle East and Europe, improving listing accuracy, compliance, and buyer experience.
+
+(3) Designed and implemented automation solutions saving ~18,000 hours/ year, streamlining workflows, and influencing $7.3M+ in gross transaction value.
+
+(4) Built a data-driven incident and SLA optimization engine using Python- based automation, reducing issue resolution time from 9+ days to 5 days and cutting audit review time to <30 seconds per case.
+
+
+
+
+
+
+(5) Managed 14,000+ operational cases during peak periods, reducing turnaround time from 5 days to 2.6 days while maintaining 99.8%+ quality.
+
+(6) Partnered with logistics stakeholders to deliver $2.2M in cost savings through address correction and delivery optimization initiatives.
+
+(7) Reduced fulfillment center excess and aging inventory by $6.3M annually through structured inventory health programs.
+
+(8) Led and developed a 40-member global team, achieving 99.89%+ performance, mentoring future leaders, and standardizing best practices.
+
+(9) Re-engineered high-impact operational processes, cutting turnaround times by 26% and preventing 70,000+ unit defects through root-cause elimination.
+
+(10) Led a unified automation program delivering ~18,000 hours/year (~8.6 FTEs) in efficiency gains, improving SLA adherence, visibility, and scalability across markets.
+
+Operations Advisor
+February 2021 - July 2022 (1 year 6 months)
+(1) Advised global operations support teams on complex data and catalog issues, process improvements, and stakeholder escalations, contributing to a 20% reduction in SLA breaches.
+
+(2) Provided governance and guidance to ensure SOP adherence across North America, Europe, Far East, MENA, and India, improving audit accuracy and consistency by 15%.
+
+(3) Supported senior leadership by sharing centers of excellence, audit insights, and improvement roadmaps for case management processes, driving consistent stakeholder satisfaction.
+
+(4) Collaborated cross-functionally with multiple operational, fulfillment, data quality, and risk teams to eliminate process gaps, saving approximately 3,864 operational days annually.
+
+
+
+
+(5) Identified and resolved business-critical issues such as data suppression and attribute inaccuracies, preventing potential revenue exposure of ?1M and
+$31M in transaction value.
+
+
+(6) Designed and delivered structured training for five cohorts of operations support teams on case handling, SOP updates, and correction methodologies, increasing team productivity by 25%.
+
+(7) Acted as a senior escalation point for internal and external stakeholders, ensuring timely resolution of complex issues, improving partner experience, and reducing repeat incidents by 18%.
+
+Operations Specialist
+August 2018 - January 2021 (2 years 6 months)
+(1) Managed end-to-end case and ticketing workflows across North America, Europe, Far East, MENA, and India, ensuring timely, accurate, and consistent resolution.
+
+(2) Implemented SOP updates and compliance controls across global teams, reducing operational error rates by 15%.
+
+(3) Led daily operational huddles to communicate process changes, key learnings, and stakeholder feedback, improving team alignment and execution quality.
+
+(4) Supported audit and quality governance by reviewing 11,000+ cases annually for a 38-member team, providing structured feedback and driving continuous improvement.
+
+(5) Partnered cross-functionally with risk, fulfillment, and governance teams to resolve complex data and catalog issues, eliminating ~151,000 cases half- yearly and improving partner experience.
+
+(6) Contributed to high-impact operational initiatives, including address correction programs, delivering $1.2M in recoveries and strengthening controllership.
+
+(7) Ensured operational readiness for time-sensitive peak events (e.g., major sales cycles and seasonal spikes), preventing ?1M+ in potential revenue exposure.
+
+
+
+
+
+
+(8) Acted as a first-level escalation owner, enabling rapid issue resolution, reducing SLA breaches, and maintaining service continuity during high-volume periods.
+
+HSBC
+Credit Analyst
+May 2017 - March 2018 (11 months) Hyderabad, Telangana, India
+Roles & Responsibilities:
+
+
+Conduct comprehensive credit assessments and risk analyses for corporate and retail clients, evaluating financial statements, credit reports, and market trends to ensure informed lending decisions.
+
+Monitor and manage existing credit portfolios, identifying early warning signals and mitigating potential risks through proactive interventions.
+
+Collaborate with relationship managers and internal stakeholders to structure credit facilities, ensuring alignment with HSBC's risk policies and regulatory requirements.
+
+Prepare detailed credit proposals, reports, and presentations for senior management, highlighting key insights and recommendations.
+
+Streamline credit assessment processes by implementing automated tools and enhanced analytical frameworks, improving efficiency and turnaround time.
+
+Mentor junior analysts and provide guidance on credit evaluation techniques and reporting standards.
+
+Key Achievements & Impact:
+
+
+Received Production Growth Award Twice for consistently exceeding lending and portfolio growth targets, contributing to a 15% increase in approved credit limits across assigned portfolios.
+
+Introduced enhanced credit risk models that reduced non-performing assets (NPAs) by an estimated 12% annually, improving overall portfolio quality.
+
+
+
+
+Led cross-functional initiatives that accelerated loan approval cycles by 20%, positively impacting customer satisfaction and revenue generation.
+
+Education
+St. Ann's College for Women
+Masters in Finance, Banking, Corporate, Finance, E-commerce and Securities Law
+
+Osmania University
+Bachelor of Commerce - BCom, Banking and Financial Support Services ú (2012 - 2015)
+
+

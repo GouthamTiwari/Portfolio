@@ -1,63 +1,145 @@
 /**
  * Portfolio Website - JavaScript
- * Goutham Tiwari - Operations Specialist & System Architect
- * Optimized for smooth animations and performance
+ * Goutham Tiwari - Operations Specialist
+ * Fixed version with working animations
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // =====================================================
+    // Premium Loading Screen
+    // =====================================================
+    const loader = document.getElementById('loading-screen');
+    const loaderCounter = document.querySelector('.loader-counter');
+    const barFill = document.querySelector('.bar-fill');
+
+    // Disable scroll initially
+    document.body.style.overflow = 'hidden';
+
+    let loadCount = 0;
+    const loadInterval = setInterval(() => {
+        loadCount++;
+        if (loaderCounter) {
+            loaderCounter.textContent = `${loadCount}%`;
+        }
+        if (barFill) {
+            barFill.style.width = `${loadCount}%`;
+        }
+
+        if (loadCount >= 100) {
+            clearInterval(loadInterval);
+
+            // Fade out loader
+            setTimeout(() => {
+                if (loader) {
+                    loader.classList.add('fade-out');
+                }
+                // Enable scroll
+                document.body.style.overflow = '';
+
+                // Trigger hero animations after loader is gone
+                setTimeout(() => {
+                    initAnimations();
+                }, 500);
+            }, 500);
+        }
+    }, 20); // Adjust speed of counting here
+
     // Initialize Lucide icons
     lucide.createIcons();
 
     // =====================================================
-    // Dark Mode Toggle with Wave Transition
+    // Custom Cursor
     // =====================================================
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const themeOverlay = document.getElementById('themeOverlay');
-    const body = document.body;
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    document.body.appendChild(cursor);
 
-    // Check for saved preference or system preference
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    let cursorX = 0, cursorY = 0;
+    let targetX = 0, targetY = 0;
 
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-        body.classList.add('dark-mode');
+    document.addEventListener('mousemove', (e) => {
+        targetX = e.clientX;
+        targetY = e.clientY;
+    });
+
+    function animateCursor() {
+        cursorX += (targetX - cursorX) * 0.15;
+        cursorY += (targetY - cursorY) * 0.15;
+        cursor.style.left = cursorX + 'px';
+        cursor.style.top = cursorY + 'px';
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Cursor hover effect on interactive elements
+    const interactiveElements = document.querySelectorAll('a, button, .project-card, .impact-card, .skill-category, .achievement-card');
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+
+    // Hide cursor on touch devices
+    if ('ontouchstart' in window) {
+        cursor.style.display = 'none';
     }
 
-    darkModeToggle.addEventListener('click', (e) => {
-        const rect = darkModeToggle.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
+    // =====================================================
+    // Scroll Progress Indicator
+    // =====================================================
+    const scrollProgress = document.createElement('div');
+    scrollProgress.className = 'scroll-progress';
+    scrollProgress.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #FF6B35, #FF8555);
+        z-index: 9999;
+    `;
+    document.body.appendChild(scrollProgress);
 
-        // Position the wave via CSS custom properties
-        themeOverlay.style.setProperty('--wave-x', `${centerX}px`);
-        themeOverlay.style.setProperty('--wave-y', `${centerY}px`);
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        scrollProgress.style.width = scrollPercent + '%';
+    }, { passive: true });
 
-        const isDark = body.classList.contains('dark-mode');
+    // =====================================================
+    // Mouse Gradient Follower
+    // =====================================================
+    const mouseGradient = document.createElement('div');
+    mouseGradient.style.cssText = `
+        position: fixed;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 107, 53, 0.12) 0%, transparent 70%);
+        pointer-events: none;
+        z-index: 0;
+        transform: translate(-50%, -50%);
+        transition: left 0.3s ease, top 0.3s ease;
+    `;
+    document.body.appendChild(mouseGradient);
 
-        // Set wave color based on target theme
-        themeOverlay.classList.remove('to-dark', 'to-light', 'active');
-        themeOverlay.classList.add(isDark ? 'to-light' : 'to-dark');
-
-        // Force reflow then start animation
-        void themeOverlay.offsetWidth;
-        themeOverlay.classList.add('active');
-
-        // Toggle theme immediately - elements change as wave passes
-        body.classList.toggle('dark-mode');
-        localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-        lucide.createIcons();
-
-        // Cleanup after animation
-        setTimeout(() => {
-            themeOverlay.classList.remove('active', 'to-dark', 'to-light');
-        }, 750);
+    let gradientX = 0, gradientY = 0;
+    document.addEventListener('mousemove', (e) => {
+        gradientX += (e.clientX - gradientX) * 0.05;
+        gradientY += (e.clientY - gradientY) * 0.05;
     });
+
+    function animateGradient() {
+        mouseGradient.style.left = gradientX + 'px';
+        mouseGradient.style.top = gradientY + 'px';
+        requestAnimationFrame(animateGradient);
+    }
+    animateGradient();
 
     // =====================================================
     // Navigation - Scroll Effect
     // =====================================================
     const navbar = document.getElementById('navbar');
-    let lastScroll = 0;
     let ticking = false;
 
     const updateNavbar = () => {
@@ -69,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
 
-        lastScroll = currentScroll;
         ticking = false;
     };
 
@@ -92,7 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking a link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenuBtn.classList.remove('active');
@@ -104,20 +184,68 @@ document.addEventListener('DOMContentLoaded', () => {
     // =====================================================
     // Scroll Reveal Animation (Intersection Observer)
     // =====================================================
-    const revealElements = document.querySelectorAll('.reveal');
+    // =====================================================
+    // Scroll Reveal Animation (Intersection Observer)
+    // =====================================================
+    function initAnimations() {
+        const revealElements = document.querySelectorAll('.reveal');
 
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    }
+
+    // =====================================================
+    // 3D Tilt Effect on Cards
+    // =====================================================
+    const tiltCards = document.querySelectorAll('.project-card, .impact-card, .achievement-card, .tilt-card');
+
+    tiltCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+
+            card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+        });
     });
 
-    revealElements.forEach(el => revealObserver.observe(el));
+    // =====================================================
+    // Magnetic Button Effect
+    // =====================================================
+    const magneticBtns = document.querySelectorAll('.btn, .nav-cta');
+
+    magneticBtns.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0, 0)';
+        });
+    });
 
     // =====================================================
     // Counter Animation
@@ -130,14 +258,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         counterElements.forEach(counter => {
             const target = parseFloat(counter.dataset.target);
-            const duration = 2000;
+            const duration = 2500;
             const startTime = performance.now();
 
             const updateCounter = (currentTime) => {
                 const elapsed = currentTime - startTime;
                 const progress = Math.min(elapsed / duration, 1);
-
-                // Easing function
                 const easeOutQuart = 1 - Math.pow(1 - progress, 4);
                 const current = target * easeOutQuart;
 
@@ -160,7 +286,6 @@ document.addEventListener('DOMContentLoaded', () => {
         countersAnimated = true;
     };
 
-    // Observe hero stats for counter animation
     const statsSection = document.querySelector('.hero-stats');
     if (statsSection) {
         const statsObserver = new IntersectionObserver((entries) => {
@@ -184,7 +309,9 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const progress = entry.target.dataset.progress;
-                entry.target.style.width = progress + '%';
+                setTimeout(() => {
+                    entry.target.style.width = progress + '%';
+                }, 200);
                 skillsObserver.unobserve(entry.target);
             }
         });
@@ -217,22 +344,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =====================================================
-    // Skill Tag Hover Effects
+    // Staggered Card Animations
     // =====================================================
-    const skillTags = document.querySelectorAll('.skill-tag');
-    skillTags.forEach(tag => {
-        tag.addEventListener('mouseenter', () => {
-            tag.style.transform = 'translateY(-3px) scale(1.02)';
+    const animatedCards = document.querySelectorAll('.impact-card, .skill-category, .project-card, .timeline-item, .education-card, .achievement-card, .hobby-card');
+
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const siblings = entry.target.parentElement.querySelectorAll('.impact-card, .skill-category, .project-card, .timeline-item, .education-card, .achievement-card, .hobby-card');
+                const siblingIndex = Array.from(siblings).indexOf(entry.target);
+
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, siblingIndex * 100);
+
+                cardObserver.unobserve(entry.target);
+            }
         });
-        tag.addEventListener('mouseleave', () => {
-            tag.style.transform = 'translateY(0) scale(1)';
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -30px 0px'
+    });
+
+    animatedCards.forEach(card => cardObserver.observe(card));
+
+    // =====================================================
+    // Project Tabs Logic
+    // =====================================================
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons and contents
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+
+            // Add active class to clicked button
+            btn.classList.add('active');
+
+            // Show corresponding content
+            const tabId = btn.getAttribute('data-tab');
+            const targetContent = document.getElementById(`${tabId}-projects`);
+            if (targetContent) {
+                targetContent.classList.add('active');
+
+                // Re-trigger scroll animations for new content
+                const newCards = targetContent.querySelectorAll('.project-card');
+                newCards.forEach(card => {
+                    card.classList.remove('visible');
+                    cardObserver.observe(card);
+                });
+            }
         });
     });
 
     // =====================================================
     // Console Easter Egg
     // =====================================================
-    console.log('%c👋 Hi there!', 'font-size: 24px; font-weight: bold;');
-    console.log('%cThanks for checking out my portfolio!', 'font-size: 14px;');
-    console.log('%c— Goutham Tiwari', 'font-size: 12px; color: #0071e3;');
+    console.log('%c🚀 GOUTHAM TIWARI', 'font-size: 24px; font-weight: bold; color: #FF6B35;');
+    console.log('%cOperations Specialist • System Architect • Automation Engineer', 'font-size: 14px; color: #888;');
+    console.log('%c50% productivity gains • 10K+ tickets unlocked • Sev-2 incident management', 'font-size: 12px; color: #FF8555;');
 });
